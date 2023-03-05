@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+
+{% block content %}
+  <h1>List of Users</h1>
+  <ul>
+    {% for user in usersq %}
+      <li>{{ user.username }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

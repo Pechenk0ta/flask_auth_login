@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ToDo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  <style>
+    .header {
+  border-bottom: 1px solid #ccc;
+  height: 58px;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+  -webkit-box-shadow: 0px 10px 27px -1px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 0px 10px 27px -1px rgba(34, 60, 80, 0.2);
+  box-shadow: 0px 10px 27px -1px rgba(34, 60, 80, 0.2);
+}
+
+.top-nav {
+  display: flex;
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.top-nav__item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__actions a {
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  color: #000;
+}
+
+.header__actions a:first-child {
+  margin-right: 12px;
+}
+
+.header__actions a:last-child {
+  margin-left: 12px;
+}
+
+.main {
+  padding: 0 16px;
+  margin-top: 40px;
+}
+
+.container {
+  max-width: 1192px;
+  margin: 0 auto;
+}
+  </style>
+    <header class="header">
+      <nav class="header__nav top-nav">
+        <li class="top-nav__item">
+          <a href="/dashbord">Dashbord</a>
+        </li>
+      </nav>
+
+      <div class="header__actions">
+        <a href="/login">Вход</a>
+        |
+        <a href="/register">Регистрация</a>
+      </div>
+    </header>
+    <main class="container main">
+
+      {% block content %}
+      {% endblock %}
+    </main>
+  </body>
+</html>
